@@ -1,0 +1,52 @@
+@mixin human-hero($name, $ext: "jpg") {
+  &--#{$name} {
+    &:after {
+      background-image: url("/images/humans/#{$name}.#{$ext}");
+    }
+  }
+}
+
+.human-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  width: 30%;
+}
+
+.human-summary__hero {
+  width: 100%;
+  padding-bottom: 100%;
+
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    width: 60%;
+    height: 0px;
+    background: black;
+    left: 0px;
+    box-shadow: 7px -3px 24px 5px rgba(0, 0, 0, 0.8);
+    transform: rotate(-2deg);
+    z-index: 0;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  @include human-hero("desmond", "png");
+}
+
+.human-summary__text {
+  width: 90%;
+}

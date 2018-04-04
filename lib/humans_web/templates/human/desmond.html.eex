@@ -1,0 +1,7 @@
+<p>
+  <em>How did you get into Elixir?</em>
+</p>
+
+<p>
+  I got into Elixir at work. I work at a data analytics company called Second Spectrum in downtown LA. We’ve been using Elixir for the past year and a half or so. Before that, for a lot of our backend stuff, we’d been using NodeJS for the lightweight stuff and we also had a couple of data backends written in Go. One of the other senior engineers had heard about Elixir and spent a weekend working on a toy project, loved some of the language features, and recommended that the rest of us check it out. I think the first project that we did was an internal project to collate and solicit internal company reviews on staff and such. Once we got a sense of what the language was capable of we started using it for some of our client-facing products.
+</p>

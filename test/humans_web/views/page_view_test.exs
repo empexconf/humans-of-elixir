@@ -1,3 +1,3 @@
-defmodule HumansWeb.PageViewTest do
+defmodule HumansWeb.HumanViewTest do
   use HumansWeb.ConnCase, async: true
 end

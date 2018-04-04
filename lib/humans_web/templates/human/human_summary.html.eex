@@ -1,0 +1,7 @@
+<div class="human-summary">
+  <a class="human-summary__hero human-summary__hero--<%= @name %>"  href="/humans/<%= @name %>"></a>
+
+  <div class="human-summary__text">
+    <%= render "#{@name}.html" %>
+  </div>
+</div>
