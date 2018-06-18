@@ -33,67 +33,73 @@ $tablet-width: $small-section-width;
   padding: 0 $page-padding;
 }
 
-.hide-mobile {
-  @include media-mobile() {
-    display: none;
-  }
-}
-
-.hide-tablet {
-  @include media-tablet() {
-    display: none;
-  }
-}
-
-.body {
-  background: white;
-  color: $color0;
-
-  h2 {
-    font-size: $landing-font-size-h2;
-  }
-
-  p {
-    font-size: $landing-font-size-body;
-    line-height: 1.25;
-  }
-
-  $button-padding: (100px - $landing-font-size-body) / 2;
-
-  .button,
-  .button-primary {
-    font-size: $landing-font-size-body;
-
-    height: auto;
-
-    padding: $button-padding 0;
-
-    @include media-tablet {
-      padding: $button-padding;
+.style-2018 {
+  .hide-mobile {
+    @include media-mobile() {
+      display: none;
     }
   }
 
-  input {
-    height: auto;
-    font-size: 2rem;
-    padding: $button-padding 2rem;
+  .hide-tablet {
+    @include media-tablet() {
+      display: none;
+    }
+  }
 
-    @include media-tablet {
+  &.body {
+    background: white;
+    color: $color0;
+
+    h2 {
+      font-size: $landing-font-size-h2;
+    }
+
+    p {
       font-size: $landing-font-size-body;
-      padding: $button-padding;
+      line-height: 1.25;
+    }
+
+    $button-padding: (100px - $landing-font-size-body) / 2;
+
+    .button,
+    .button-primary {
+      font-size: $landing-font-size-body;
+
+      height: auto;
+
+      padding: $button-padding 0;
+
+      @include media-tablet {
+        padding: $button-padding;
+      }
+    }
+
+    input {
+      height: auto;
+      font-size: 2rem;
+      padding: $button-padding 2rem;
+
+      @include media-tablet {
+        font-size: $landing-font-size-body;
+        padding: $button-padding;
+      }
     }
   }
-}
 
-#signup-form {
-  display: flex;
-  flex-direction: column;
+  #signup-form {
+    display: flex;
+    flex-direction: column;
 
-  @include media-tablet {
-    flex-direction: row;
+    @include media-tablet {
+      flex-direction: row;
 
-    .button-primary {
-      margin-left: 0.5rem;
+      input[type="email"] {
+        width: 100%;
+      }
+
+      .button-primary {
+        margin-left: 0.5rem;
+      }
     }
   }
 }

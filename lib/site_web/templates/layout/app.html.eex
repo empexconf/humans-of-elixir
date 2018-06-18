@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
-    <title>EMPEX</title>
+    <title><%= assigns[:title] || "EMPEX" %></title>
 
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css" />
@@ -36,7 +36,7 @@
     <meta property="og:image" content="<%= static_path(@conn, "/images/flag.jpg") %>" />
   </head>
 
-  <body class="body">
+  <body class="body <%= if assigns[:year], do: "style-#{assigns[:year]}" %>">
     <%= render @view_module, @view_template, assigns %>
 
     <script

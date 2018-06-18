@@ -9,7 +9,9 @@
   "rules": {
     "strict": 0,
     "func-names": 0,
-    "no-use-before-define": 0
+    "no-use-before-define": 0,
+    "prefer-arrow-callback": 0,
+    "no-restricted-globals": 0
   },
   "extends": ["airbnb-base", "prettier"]
 }
