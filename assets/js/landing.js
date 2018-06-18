@@ -1,10 +1,13 @@
 (function() {
-  function navigateToPage(page) {
-    return function() {
-      window.location.href = `/${page}`;
-    };
+  function navigateToPage() {
+    const $pane = $(this);
+
+    window.location.href = $pane
+      .find("a[data-selector='landing-button-link']")
+      .first()
+      .attr("href");
   }
 
-  $(".hero-card--nyc").click(navigateToPage("nyc"));
-  $(".hero-card--la").click(navigateToPage("la"));
+  $(".hero-card--nyc").click(navigateToPage);
+  $(".hero-card--la").click(navigateToPage);
 })();
