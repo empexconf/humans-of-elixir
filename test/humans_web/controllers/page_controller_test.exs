@@ -1,5 +1,5 @@
-defmodule HumansWeb.PageControllerTest do
-  use HumansWeb.ConnCase
+defmodule SiteWeb.PageControllerTest do
+  use SiteWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")

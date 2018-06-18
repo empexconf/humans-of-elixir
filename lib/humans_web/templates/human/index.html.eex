@@ -1,6 +1,0 @@
-<div class="human-index__list">
-  <%= render "human_summary.html", name: "desmond" %>
-  <%= render "human_summary.html", name: "desmond" %>
-  <%= render "human_summary.html", name: "desmond" %>
-  <%= render "human_summary.html", name: "desmond" %>
-</div>

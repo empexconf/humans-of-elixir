@@ -1,3 +1,3 @@
-defmodule HumansWeb.LayoutViewTest do
-  use HumansWeb.ConnCase, async: true
+defmodule SiteWeb.LayoutViewTest do
+  use SiteWeb.ConnCase, async: true
 end

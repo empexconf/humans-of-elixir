@@ -1,4 +1,4 @@
-defmodule HumansWeb.ConnCase do
+defmodule SiteWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -19,10 +19,10 @@ defmodule HumansWeb.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
-      import HumansWeb.Router.Helpers
+      import SiteWeb.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint HumansWeb.Endpoint
+      @endpoint SiteWeb.Endpoint
     end
   end
 
