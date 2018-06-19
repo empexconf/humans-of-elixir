@@ -1,0 +1,430 @@
+@import "compass/css3/font-face";
+@import "_launch-settings";
+
+@include font-face(
+  "GT-Walsheim-Regular",
+  font-files(
+    "/fonts/GT-Walsheim-Regular.eot",
+    "/fonts/GT-Walsheim-Regular.eot",
+    "/fonts/GT-Walsheim-Regular.ttf",
+    "/fonts/GT-Walsheim-Regular.woff"
+  )
+);
+
+body {
+  background-color: #000;
+  display: block;
+  padding: 0;
+  margin: 0;
+  @include font-smoothing(antialiased);
+}
+
+body,
+input,
+select,
+textarea {
+  color: $bodyColor;
+  font-family: "GT-Walsheim-Regular";
+  font-size: 16pt;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.65em;
+}
+
+main {
+  @include bg-cloudy;
+
+  padding-top: 1em;
+  background-color: #f5f3f6;
+  color: black;
+
+  // direct child section elements mixin content-section
+  > section {
+    @include content-section;
+  }
+}
+
+@include hd {
+  body,
+  input,
+  select,
+  textarea {
+    font-size: 12pt;
+  }
+}
+
+@include desktop {
+  body,
+  input,
+  select,
+  textarea {
+    font-size: 11pt;
+  }
+}
+
+@include tablet {
+  body,
+  input,
+  select,
+  textarea {
+    font-size: 12pt;
+  }
+}
+
+@include phablet {
+  body,
+  input,
+  select,
+  textarea {
+    font-size: 12pt;
+  }
+}
+
+@include mobile {
+  body,
+  input,
+  select,
+  textarea {
+    font-size: 12pt;
+  }
+}
+
+a {
+  /* color: $halloweenOrange; */
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: dotted 1px rgba(255, 255, 255, 0.25);
+    /* color: $halloweenOrange; */
+    text-decoration: none;
+  }
+}
+
+.no-hover {
+  &.button:hover {
+    border: solid 1px;
+  }
+
+  &:hover {
+    border: inherit;
+  }
+}
+
+strong,
+b {
+  color: #fff;
+  font-weight: 700;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+  font-weight: 700;
+  line-height: 1em;
+  margin: 0 0 1em 0;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.25em;
+}
+
+h2 {
+  font-size: 1.75em;
+  line-height: 1.5em;
+}
+
+h3 {
+  font-size: 1.35em;
+  line-height: 1.5em;
+}
+
+h4 {
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+h5 {
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+h6 {
+  font-size: 0.7em;
+  line-height: 1.5em;
+}
+
+sub {
+  font-size: 0.8em;
+  position: relative;
+  top: 0.5em;
+}
+
+sup {
+  font-size: 0.8em;
+  position: relative;
+  top: -0.5em;
+}
+
+blockquote {
+  border-left: solid 8px rgba(255, 255, 255, 0.35);
+  font-style: italic;
+  margin: 0 0 2em 0;
+  padding: 0.5em 0 0.5em 2em;
+}
+
+code {
+  background: rgba(255, 255, 255, 0.125);
+  border-radius: 6px;
+  border: solid 2px rgba(255, 255, 255, 0.35);
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+  margin: 0 0.25em;
+  padding: 0.25em 0.65em;
+}
+
+pre {
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+  margin: 0 0 2em 0;
+}
+
+pre code {
+  display: block;
+  line-height: 1.75em;
+  padding: 1em 1.5em;
+  overflow-x: auto;
+}
+
+hr {
+  border: 0;
+  border-bottom: solid 2px rgba(255, 255, 255, 0.35);
+  margin: 2em 0;
+}
+
+hr.major {
+  margin: 3em 0;
+}
+
+.icon {
+  text-decoration: none;
+  border-bottom: none;
+  position: relative;
+
+  &:before {
+    @include font-smoothing(antialiased);
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none !important;
+  }
+
+  > .label {
+    display: none;
+  }
+}
+
+/* List */
+
+ol {
+  list-style: decimal;
+  margin: 0 0 2em 0;
+  padding-left: 1.25em;
+}
+
+ol li {
+  padding-left: 0.25em;
+}
+
+ul {
+  list-style: disc;
+  margin: 0 0 2em 0;
+  padding-left: 1em;
+}
+
+ul {
+  &.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      padding: 0 1em 0 0;
+    }
+
+    li:last-child {
+      padding-right: 0;
+    }
+
+    li .icon:before {
+      font-size: 1.5em;
+    }
+
+    li a {
+      color: inherit;
+      &:hover {
+        /* color: $halloweenOrange; */
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+header {
+  h1 {
+    font-size: 3.25em;
+    margin: 0 0 0.55em 0;
+  }
+
+  p {
+    font-size: 1.35em;
+    line-height: 1.65em;
+    color: rgba(255, 255, 255, 1);
+    position: relative;
+    margin: 0 0 1.5em 0;
+  }
+
+  h2 + p {
+    font-size: 1.25em;
+    margin-top: -1em;
+    line-height: 1.5em;
+  }
+
+  h3 + p {
+    font-size: 1.1em;
+    margin-top: -0.8em;
+    line-height: 1.5em;
+  }
+
+  h4 + p,
+  h5 + p,
+  h6 + p {
+    font-size: 0.9em;
+    margin-top: -0.6em;
+    line-height: 1.5em;
+  }
+  small {
+    font-size: 1em;
+  }
+
+  .crevalle-name {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  header br {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    margin: 0 0 1em 0;
+  }
+}
+
+.logo {
+  display: block;
+  background-size: 260%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 150px;
+  background-image: url("/images/empex-logo-official.svg");
+  margin-bottom: 2em;
+
+  &.white {
+    background-image: url("/images/empex-logo-official-white.svg");
+  }
+
+  &.la {
+    background-image: url("/images/empex-logo-la-white.png");
+    background-size: contain;
+
+    &.black {
+      background-image: url("/images/empex-logo-la.png");
+    }
+  }
+}
+
+.replace-text {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.current-event {
+  background-color: rgba(0, 0, 0, 1) !important;
+  /* border-color: $halloweenOrange !important; */
+}
+
+.current-event-text {
+  /* color: $halloweenOrange; */
+}
+
+.current-event-text-la {
+  color: black;
+  font-size: 36px;
+}
+
+.not-mobile {
+  display: none;
+
+  @include phablet {
+    display: inline-block;
+  }
+}
+
+.mobile-only {
+  display: inline-block;
+
+  @include phablet {
+    display: none;
+  }
+}

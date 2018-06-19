@@ -1,0 +1,428 @@
+#hero {
+  text-align: center;
+  position: relative;
+  padding: 2em 0;
+
+  .logo {
+    margin: 0 auto;
+    background-image: url("/images/empex-logo-official-white.svg");
+    margin-bottom: 1em;
+  }
+
+  @include phablet {
+    padding: 1em 0;
+  }
+
+  @include tablet {
+    padding: 1em 0;
+  }
+
+  @include desktop {
+    padding: 2em 0;
+  }
+}
+
+.navbar {
+  display: none;
+}
+
+@include tablet {
+  /* Navbar */
+  .navbar {
+  }
+
+  .navbar,
+  .navbar-spacer {
+    background-color: #1f1f1f;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 6.5rem;
+    z-index: 99;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+
+    + .content-section {
+      border-top-width: 0;
+    }
+  }
+  .navbar-spacer {
+    display: none;
+  }
+  .navbar > .container {
+    width: 100%;
+  }
+  .navbar-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  .navbar-item {
+    margin-bottom: 0;
+  }
+  .navbar-link {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    margin-right: 35px;
+    text-decoration: none;
+    line-height: 6.5rem;
+    color: white;
+    &:hover {
+      color: $halloweenOrange;
+    }
+  }
+  .has-docked-nav .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .has-docked-nav .navbar-spacer {
+    display: block;
+  }
+  /* Re-overiding the width 100% declaration to match size of % based container */
+  .has-docked-nav .navbar > .container {
+    width: 80%;
+  }
+}
+
+// remove blue highlight on carousel slide select
+.slick-slide {
+  outline: none;
+}
+
+#about {
+  p {
+    margin: 10px 0;
+  }
+}
+
+section {
+  .gallery {
+    height: 640px;
+    position: relative;
+    margin-top: 2em;
+  }
+
+  .gallery-display {
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  .gallery-carousel {
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
+  }
+
+  img.carousel-image {
+    width: 80%;
+  }
+}
+
+#location {
+  .hotel {
+    margin-top: 2em;
+    p:last-child {
+      margin: 0;
+    }
+  }
+}
+
+#sponsors {
+  a.image-link {
+    &:hover {
+      border-bottom: none;
+      text-decoration: none;
+    }
+  }
+
+  .sponsor-list {
+    @include media-container;
+    text-align: center;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 4em;
+    margin-bottom: 0em;
+  }
+
+  .sponsors {
+    padding-bottom: 30px;
+    display: inline-block;
+
+    &.crevalle {
+      padding-bottom: 0px;
+      img.crevalle-logo {
+        height: 250px;
+        width: 250px;
+      }
+    }
+
+    &.platinum {
+      h3 {
+        color: rgba(175, 175, 175, 1);
+      }
+      img {
+        @include mobile {
+          height: 43px;
+          width: 300px;
+        }
+
+        @include tablet {
+          height: 100%;
+        }
+      }
+    }
+    &.gold {
+      h3 {
+        color: rgba(229, 184, 72, 1);
+      }
+
+      img {
+        height: 110px;
+        width: 200px;
+      }
+    }
+    &.lightning {
+      h3 {
+        color: rgba(229, 184, 72, 1);
+      }
+
+      img {
+        height: 110px;
+        width: 200px;
+      }
+    }
+    &.silver {
+      h3 {
+        color: rgba(175, 175, 175, 0.5);
+      }
+
+      img {
+        height: 75px;
+        width: 150px;
+        padding: 0 15px;
+      }
+    }
+  }
+}
+
+#organizers {
+  .organizer-list {
+    @include media-container;
+  }
+
+  .organizer {
+    @include media-item(75px);
+    margin: 1em 1em 1em 0;
+    line-height: 1.2em;
+    width: 100%;
+
+    h3 {
+      margin: 0;
+      font-size: 1.2em;
+      letter-spacing: 0.05rem;
+    }
+
+    @include phablet {
+      width: 45%;
+      font-size: 0.9em;
+      min-height: 90px;
+    }
+
+    @include tablet {
+      width: 30%;
+    }
+
+    @include hd {
+      font-size: 1em;
+      line-height: 1.25em;
+    }
+  }
+}
+
+#schedule {
+  .schedule-table {
+    .time,
+    .title {
+      font-size: 2rem;
+    }
+    .time {
+      text-align: right;
+    }
+    .title {
+      font-weight: bold;
+    }
+  }
+
+  @include mobile {
+  }
+
+  @include phablet {
+  }
+
+  @include tablet {
+  }
+
+  @include hd {
+    .container {
+      margin-top: -4em;
+      padding-top: 4em;
+      border-top: 1px #e1e1e1 solid;
+    }
+  }
+}
+
+#signup-form {
+  @include display-flex;
+  position: relative;
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    width: 18em;
+  }
+
+  > * {
+    margin: 0 0 0 1em;
+  }
+
+  > :first-child {
+    margin: 0 0 0 0;
+  }
+}
+
+#bottom {
+  @include content-section;
+}
+
+#footer {
+  @include transition(opacity 0.2s ease-in-out);
+  bottom: 4em;
+  color: rgba(255, 255, 255, 0.5);
+  left: 4em;
+  opacity: 0.5;
+  margin-top: 2em;
+  color: rgba(255, 255, 255, 0.7);
+
+  a {
+    color: inherit;
+    &:hover {
+      color: $halloweenOrange;
+      text-decoration: none;
+    }
+  }
+
+  .icons {
+    margin: 0 0 0.5em 0;
+  }
+
+  .links {
+    list-style: none;
+    padding: 0;
+
+    li {
+      border-left: solid 1px rgba(255, 255, 255, 0.25);
+      display: inline-block;
+      line-height: 1em;
+      margin: 0 0 0 0.75em;
+      padding: 0 0 0 0.75em;
+    }
+
+    li:first-child {
+      border-left: 0;
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 1;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+  .crevalle-name {
+    height: 16px;
+    width: 92px;
+  }
+}
+
+#moon {
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  div {
+    background-image: url("/images/empire_state.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+
+    &.visible {
+      @include transition(opacity 3s ease);
+      opacity: 1;
+    }
+  }
+}
+
+.la {
+  #hero {
+    .logo {
+      background-image: url("/images/empex-logo-la-white.png");
+    }
+  }
+
+  #moon {
+    div {
+      background-image: url("/images/la-hero.jpg");
+    }
+  }
+
+  #about #signup-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 0;
+
+    #email {
+      border: 1px solid gray;
+    }
+  }
+
+  &__location-data {
+    margin-top: 50px;
+    margin-bottom: -30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  &__location-fact {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    color: black;
+  }
+
+  &__location-icon {
+    height: 3rem;
+    margin-right: 1rem;
+  }
+}

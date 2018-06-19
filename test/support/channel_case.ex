@@ -1,4 +1,4 @@
-defmodule HumansWeb.ChannelCase do
+defmodule SiteWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,7 +21,7 @@ defmodule HumansWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint HumansWeb.Endpoint
+      @endpoint SiteWeb.Endpoint
     end
   end
 

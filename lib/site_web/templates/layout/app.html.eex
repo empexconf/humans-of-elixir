@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <title><%= assigns[:title] || "EMPEX" %></title>
+
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css" />
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-73059900-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-73059900-1');
+    </script>
+
+    <link rel="canonical" href="http://empex.co">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@empexco" />
+    <meta name="twitter:title" content="EMPEX - An Elixir Movement." />
+    <meta name="twitter:description" content="EMPEX is a sophisticated conference series for the Elixir programming language and ecosystem held in New York City and Los Angeles."
+    />
+    <meta name="twitter:image" content="<%= static_path(@conn, "/images/flag.jpg") %>" />
+
+    <meta property="og:url" content="http://empex.co/" />
+    <meta property="og:title" content="EMPEX - An Elixir Movement." />
+    <meta property="og:description" content="EMPEX is a sophisticated conference series for the Elixir programming language and ecosystem held in New York City and Los Angeles."
+    />
+    <meta property="og:image" content="<%= static_path(@conn, "/images/flag.jpg") %>" />
+  </head>
+
+  <body class="body <%= if assigns[:year], do: "style-#{assigns[:year]}" %>">
+    <%= render @view_module, @view_template, assigns %>
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>

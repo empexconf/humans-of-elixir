@@ -6,11 +6,11 @@
 use Mix.Config
 
 # Configures the endpoint
-config :humans, HumansWeb.Endpoint,
+config :site, SiteWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "UHrNd0M4G9JemjwGwPldgzhecGdgiiNA/+TVdmHcCFddV/43pl3ma+L/E+f2/eLE",
-  render_errors: [view: HumansWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Humans.PubSub, adapter: Phoenix.PubSub.PG2]
+  render_errors: [view: SiteWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: Site.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,

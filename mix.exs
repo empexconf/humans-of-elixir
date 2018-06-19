@@ -1,9 +1,9 @@
-defmodule Humans.Mixfile do
+defmodule Site.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :humans,
+      app: :site,
       version: "0.0.1",
       elixir: "~> 1.4",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -18,7 +18,7 @@ defmodule Humans.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Humans.Application, []},
+      mod: {Site.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

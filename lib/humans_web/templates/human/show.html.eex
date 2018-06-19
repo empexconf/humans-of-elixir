@@ -1,7 +1,0 @@
-<div class="human">
-  <div class="human__hero human__hero--<%= @name %>"></div>
-
-  <div class="human__text">
-    <%= render "#{@name}.html" %>
-  </div>
-</div>

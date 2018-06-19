@@ -1,0 +1,442 @@
+<div class="hero-background">
+  <section class="hero">
+    <nav class="nav">
+      <div class="nav__empex">
+        <strong>Empex</strong>
+        <br class="hide-tablet"/>
+
+        Los Angeles
+      </div>
+
+      <div class="nav__spacer"></div>
+
+      <div class="nav__links">
+        <a class="nav__link" href="#about">
+          About
+        </a>
+        <a class="nav__link" href="#location">
+          Location
+        </a>
+        <a class="nav__link" href="#training">
+          Training
+        </a>
+        <a class="nav__link" href="#schedule">
+          Schedule
+        </a>
+        <a class="nav__link" href="#sponsors">
+          Sponsors
+        </a>
+        <a class="nav__link" href="#organizers">
+          Organizers
+        </a>
+        <span class="nav__link">
+          <!-- spacer -->
+        </span>
+      </div>
+    </nav>
+
+    <div class="hero__content">
+      <p class="hero__presents">
+        <span class="hero__crevalle"><a href="http://crevalle.io" target="_blank">Crevalle</a></span>
+        presents:
+      </p>
+      <h2>
+        Los Angeles Civic Hack Retreat<br class="hide-mobile" / >
+      </h2>
+      <p>
+        Saturday, August 4, 2018
+      </p>
+    </div>
+
+    <div class="hero__buttons">
+      <%# <a class="hero__button hero__button--buy" href="https://ti.to/crevalle/empex-la-2018"> %>
+        <%# Buy Tickets %>
+      <%# </a> %>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>Los Angeles</h2>
+    <p>Saturday, August 4, 2018</p>
+    <p>
+      The Civic Hack Retreat is an opportunity for curious Elixir programmers to team up and work on a nontrivial Elixir application for the good of the city and people of Los Angeles.  We'll spend the day in a beautiful mansion learning and putting our skills to use for the larger community.
+    </p>
+
+    <p> We&#39;d love for you to join us.</p>
+
+    <%= render "_signup.html" %>
+  </section>
+</div>
+
+<div class="hr hr--black"></div>
+
+<section id="location" class="location">
+  <div class="location__content-color">
+    <div class="location__content">
+      <h2>
+        A Dope Mansion (With a Pool)
+      </h2>
+    </div>
+  </div>
+
+  <div class="location__details-color">
+    <div class="location__details">
+      <img src="<%= static_path(@conn, "/images/locations/mansion.webp") %>" class="location__image"  />
+
+      <div class="location__data">
+        <a class="location__fact" target="_blank" href="https://goo.gl/maps/2rRj6ouysV62">
+          <img src="<%= static_path(@conn, "/images/icons/location-icon.png") %>" alt="Find it on Google Maps" class="location__icon"  />
+
+          <span>
+            3537 Berry Dr, Studio City, CA 91604
+          </span>
+        </a>
+        <div class="location__fact">
+          <img src="<%= static_path(@conn, "/images/icons/car-icon.png") %>" class="location__icon" />
+          <span>
+            Limited parking, we recommend ride-sharing
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="presentations" class="presentations">
+  <section class="presentation-list">
+    <h2 class="presentations-list__title">How it Works</h2>
+    <p>
+      Attendees will form teams of two.  You can sign up as a duo or be matched as a single.  Contestants will have a full day to write an Elixir application that somehow benefits the city or residents of Los Angeles.
+    </p>
+    <p>
+      Projects will be judged on their creativity and utility.
+    </p>
+    <p>
+      City datasets will be made available to teams looking to integrate this data into their applications.
+    </p>
+
+    <p>
+      Experienced Elixir developers will be assigned to teams to answer questions and help you level up your knowledge.
+    </p>
+
+  </section>
+</section>
+
+<section id="presentations" class="presentations">
+  <section class="presentation-list">
+    <h2 class="presentations-list__title">The Rules</h2>
+    <p>
+      Projects must follow the rules:
+      <ul>
+        <li>Elixir must be part of the application stack</li>
+        <li>No commits before First Commit</li>
+        <li>No commits after last commit</li>
+      </ul>
+    </p>
+
+  </section>
+</section>
+
+<section id="schedule" class="schedule">
+  <h2>Schedule</h2>
+  <table class="schedule-table">
+    <tr>
+      <td class="event">
+        <div class="title">Doors open / Registration</div>
+        Grab a bagel and stake out a room.
+      </td>
+      <td class="time">
+        8:30AM
+      </td>
+    </tr>
+    <tr>
+      <td class="event">
+        <div class="title">Kickoff</div>
+      </td>
+      <td class="time">
+        9:00AM
+      </td>
+    </tr>
+    <tr>
+      <td class="event">
+        <div class="title">Lunch</div>
+        Something you can eat quickly.
+      </td>
+      <td class="time">
+        12:30pm
+      </td>
+    </tr>
+    <tr>
+      <td class="event">
+        <div class="title">Last Commit</div>
+        The Deadline.
+      </td>
+      <td class="time">
+        6:15pm
+      </td>
+    </tr>
+    <tr>
+      <td class="event">
+        <div class="title">Dinner</div>
+      </td>
+      <td class="time">
+        6:30pm
+      </td>
+    </tr>
+    <tr>
+      <td class="event">
+        <div class="title">Presentations</div>
+      </td>
+      <td class="time">
+        7:30pm
+      </td>
+    </tr>
+    <tr>
+      <td class="event">
+        <div class="title">Party!</div>
+        Have a drink, hang out, and swim in the pool.
+      </td>
+      <td class="time">
+        ???
+      </td>
+    </tr>
+
+  </table>
+</section>
+
+<section id="training" class="presentations">
+  <section class="presentation-list">
+    <h2 class="presentations-list__title">Experts On Hand</h2>
+    <div class="presentations-list__intro">
+        <h3 class="presentation__title">This is your chance to learn from the Los Angeles area's most experienced Elixir developers.  They'll answer your questions and help you move forward.</h3>
+    </div>
+    <section class="presentation" id="advanced-training">
+      <div class="presentation-presenter">
+        <div class="presentation-panel">
+          <div class="presentation-panel__member">
+            <div class="presentation-presenter__avatar-container">
+              <img src="<%= static_path(@conn, "/images/people/organizers/bowe-desmond.png") %>" class="presentation-presenter__avatar" />
+            </div>
+
+            <h4 class="presentation-presenter__name">
+              Desmond Bowe
+            </h4>
+
+            <div class="presentation-presenter__link">
+              <a target="_blank" href="https://github.com/desmondmonster">@desmondmonster</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="presentation__details">
+        <div class="presentation__bio">
+          <p>
+            Desmond is the founder of EMPEX and a cohost of the popular ElixirTalk podcast.  He also runs Crevalle, an Elixir training and development firm.  In his free time he grows his mustache and plays pinball.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="presentation" id="advanced-training">
+      <div class="presentation-presenter">
+        <div class="presentation-panel">
+          <div class="presentation-panel__member">
+            <div class="presentation-presenter__avatar-container">
+              <img src="<%= static_path(@conn, "/images/people/organizers/will.jpg") %>" class="presentation-presenter__avatar" />
+            </div>
+
+            <h4 class="presentation-presenter__name">
+              Will Ockelmann-Wagner
+            </h4>
+
+            <div class="presentation-presenter__link">
+              <a target="_blank" href="https://twitter.com/WowItsWillWow">@WowItsWillWow</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="presentation__details">
+        <div class="presentation__bio">
+          <p>
+            Will is a software developer at Carbon Five. He started his career in accounting, but found that automating his job away was more fun than the actual job, and moved over to software. He’s into typed functional programming and tiny keyboards.
+          </p>
+
+        </div>
+      </div>
+    </section>
+  </section>
+</section>
+
+<section id="sponsors" class="sponsor-section">
+  <h2>Brought to you by</h2>
+
+  <section class="sponsor-list">
+    <div class="row">
+      <div class="sponsors crevalle">
+        EMPEX is a production of <br />
+        <a class="image-link" target="_blank" href="http://crevalle.io/">
+          <img src="<%= static_path(@conn, "/images/sponsors/crevalle-la.svg") %>" alt="Crevalle" title="Crevalle" class="crevalle-logo" />
+        </a>
+      </div>
+    </div>
+
+    <%# <div class="row">
+      <div class="sponsors platinum">
+        <h3>Platinum</h3>
+
+      </div>
+    </div> %>
+
+    <div class="row">
+      <div class="sponsors gold">
+        <h3>Gold</h3>
+          <a class="image-link" target="_blank" href="http://carbonfive.com">
+            <img src="<%= static_path(@conn, "/images/sponsors/carbonfive.svg") %>" alt="Carbon Five" />
+          </a>
+      </div>
+    </div>
+
+    <%# <div class="row">
+      <div class="sponsors silver">
+        <h3>Silver</h3>
+
+      </div>
+    </div> %>
+  </section>
+
+  <div class="footer">
+    <div>
+      If you're interested in sponsoring EMPEX, please see the
+      <a href="https://docs.google.com/document/d/1meg5KshORij9x6nwda8Oh4zmEl70sWpN7reqcKS5tYs/edit">prospectus</a>,
+      or email
+      <a href="mailto:info@empex.co">info@empex.co</a>.
+    </div>
+  </div>
+</section>
+
+<section id="organizers" class="organizers">
+  <h2>Organizers</h2>
+  <section class="organizer-list">
+
+    <section class="organizer">
+      <img src="<%= static_path(@conn, "/images/people/organizers/bowe-desmond.png") %>"  />
+      <div class="bd">
+        <h3>Desmond Bowe</h3>
+        <div>
+          <a href="https://twitter.com/desmondmonster" target="_blank">
+            @desmondmonster
+          </a>
+        </div>
+        <div>
+          <a target="_blank" href="http://crevalle.io">
+            crevalle.io
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="organizer">
+      <img src="<%= static_path(@conn, "/images/people/organizers/tony.jpg") %>"  />
+      <div class="bd">
+        <h3>Tony Delgado-Willis</h3>
+        <div>
+        </div>
+      </div>
+    </section>
+
+    <section class="organizer">
+      <img src="<%= static_path(@conn, "/images/people/organizers/jack.jpg") %>"  />
+      <div class="bd">
+        <h3>Jack Eisenberg</h3>
+        <div>
+        </div>
+      </div>
+    </section>
+
+    <section class="organizer">
+      <img src="<%= static_path(@conn, "/images/people/organizers/hannah.png") %>"  />
+      <div class="bd">
+        <h3>Hannah Howard</h3>
+        <div>
+          <a href="https://twitter.com/techgirlwonder" target="_blank">
+            @techgirlwonder
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="organizer">
+      <img src="<%= static_path(@conn, "/images/people/organizers/rosemary.jpg") %>"  />
+      <div class="bd">
+        <h3>Rosemary Ledesma</h3>
+        <div>
+          <a href="https://twitter.com/rosemledesma" target="_blank">
+            @rosemledesma
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="organizer">
+      <img src="<%= static_path(@conn, "/images/people/organizers/will.jpg") %>"  />
+      <div class="bd">
+        <h3>Will Ockelmann-Wagner</h3>
+        <div>
+          <a href="https://twitter.com/WowItsWillWow" target="_blank">
+            @WowItsWillWow
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="organizer">
+      <img src="<%= static_path(@conn, "/images/people/organizers/bruce.jpg") %>"  />
+      <div class="bd">
+        <h3>Bruce Park</h3>
+        <div>
+          <a href="https://twitter.com/bpark0" target="_blank">
+            @bpark0
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="organizer">
+      <img src="<%= static_path(@conn, "/images/people/organizers/sarah.jpg") %>"  />
+      <div class="bd">
+        <h3>Sarah Port</h3>
+        <div>
+          <a href="https://github.com/seport" target="_blank">
+            @seport
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="organizer">
+      <!-- spacer -->
+    </section>
+  </section>
+</section>
+
+<section id="bottom">
+  <footer id="footer" class="footer">
+    <div class="footer__logo logo la"></div>
+    <div>
+        <ul class="links">
+          <li>&copy; <%= link to: "http://crevalle.io", target: '_blank', class: 'no-hover' do %>
+              <img src="<%= static_path(@conn, "/images/sponsors/crevalle-footer.png") %>" alt="Crevalle" title="Crevalle" class="crevalle-name" />
+          <% end %>
+          </li>
+          <li>
+            <%= tweet_link_to "Tweet at #empex",
+              url: "http://empex.co",
+              text: "Program Elixir with me at a dope mansion at EMPEX on Aug 4" %>
+          </li>
+          <li><%= link "Code of Conduct", to: "/code-of-conduct.html", relative: true %></li>
+          <li>Design by <%= link "Thought Merchants", to: "http://thoughtmerchants.com" %></li>
+        </ul>
+    </div>
+  </footer>
+</section>

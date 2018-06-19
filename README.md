@@ -1,4 +1,4 @@
-# Humans
+# Site
 
 To start your Phoenix server:
 
