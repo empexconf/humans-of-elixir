@@ -19,11 +19,6 @@ defmodule SiteWeb.Router do
 
     get("/", StaticPageController, :index)
     get("/la", StaticPageController, :la)
-    get("/:city/:type/:year", StaticPageController, :show)
+    get("/events/:year/:city/:type", StaticPageController, :show)
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", SiteWeb do
-  #   pipe_through :api
-  # end
 end
