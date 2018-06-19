@@ -432,7 +432,7 @@
           <li>
             <%= tweet_link_to "Tweet at #empex",
               url: "http://empex.co",
-              text: "EMPEX LA is happening on Feburary 10, 2018" %>
+              text: "Program Elixir with me at a dope mansion at EMPEX on Aug 4" %>
           </li>
           <li><%= link "Code of Conduct", to: "/code-of-conduct.html", relative: true %></li>
           <li>Design by <%= link "Thought Merchants", to: "http://thoughtmerchants.com" %></li>
