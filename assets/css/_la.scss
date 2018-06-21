@@ -17,19 +17,6 @@ h6 {
   margin-bottom: 0;
 }
 
-@mixin section-color($color) {
-  color: $color;
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: $color;
-  }
-}
-
 @mixin city-input($background: rgba(gray, 0.25), $border: gray) {
   background: $background;
   padding: 2.375rem 2.875rem;

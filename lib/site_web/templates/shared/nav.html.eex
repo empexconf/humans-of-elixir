@@ -1,6 +1,8 @@
 <nav class="nav">
   <div class="nav__empex">
-    <strong>Empex</strong>
+    <strong>
+      <%= link "Empex", to: homepage_path(@conn, :index) %>
+    </strong>
   </div>
 
   <div class="nav__spacer"></div>
