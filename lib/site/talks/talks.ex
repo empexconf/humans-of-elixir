@@ -21,5 +21,6 @@ defmodule Site.Talks do
   def all_speakers() do
     @all_talks
     |> Talk.latest_talk_for_each_speaker()
+    |> Enum.map(&Speaker.from_talk/1)
   end
 end

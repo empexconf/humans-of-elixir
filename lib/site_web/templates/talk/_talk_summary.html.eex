@@ -1,0 +1,5 @@
+<h3><%= @talk.title %></h3>
+
+<%= render "_talk_summary.html", talk: @talk %>
+
+<p><%= @talk.description %></p>

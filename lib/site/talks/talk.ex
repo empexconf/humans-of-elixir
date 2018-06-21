@@ -3,6 +3,7 @@ defmodule Site.Talks.Talk do
 
   @type t :: %Talk{
           title: String.t(),
+          slug: String.t(),
           youtube: String.t(),
           date: String.t(),
           location: String.t(),
@@ -10,11 +11,13 @@ defmodule Site.Talks.Talk do
           speaker_name: String.t(),
           speaker_company: String.t(),
           speaker_slug: String.t(),
-          speaker_twitter: String.t()
+          speaker_twitter: String.t(),
+          speaker_bio: String.t()
         }
 
   defstruct [
     :title,
+    :slug,
     :youtube,
     :date,
     :location,
@@ -22,7 +25,8 @@ defmodule Site.Talks.Talk do
     :speaker_name,
     :speaker_company,
     :speaker_slug,
-    :speaker_twitter
+    :speaker_twitter,
+    :speaker_bio
   ]
 
   @spec talks_for_speaker([t], String.t()) :: [t]
@@ -35,6 +39,11 @@ defmodule Site.Talks.Talk do
   def latest_talk_for_each_speaker(talks) do
     talks
     |> Enum.uniq_by(fn %Talk{speaker_slug: speaker_slug} -> speaker_slug end)
+  end
+
+  @spec youtube_link(Talk.t()) :: String.t()
+  def youtube_link(%Talk{youtube: youtube}) do
+    "https://youtu.be/#{youtube}"
   end
 
   @spec talk_belongs_to_speaker(t, String.t()) :: boolean

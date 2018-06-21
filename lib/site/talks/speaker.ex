@@ -6,14 +6,16 @@ defmodule Site.Talks.Speaker do
           name: String.t(),
           company: String.t(),
           slug: String.t(),
-          twitter: String.t()
+          twitter: String.t(),
+          bio: String.t()
         }
 
   defstruct [
     :name,
     :company,
     :slug,
-    :twitter
+    :twitter,
+    :bio
   ]
 
   @spec from_talk(Talk.t()) :: t
@@ -21,13 +23,15 @@ defmodule Site.Talks.Speaker do
         speaker_name: name,
         speaker_company: company,
         speaker_slug: slug,
-        speaker_twitter: twitter
+        speaker_twitter: twitter,
+        speaker_bio: bio
       }) do
     %Speaker{
       name: name,
       company: company,
       slug: slug,
-      twitter: twitter
+      twitter: twitter,
+      bio: bio
     }
   end
 end

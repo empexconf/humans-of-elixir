@@ -1,0 +1,5 @@
+<%= render SharedView, "nav.html", conn: @conn %>
+
+<div class="normal-section">
+  <h1>EMPEX Talks</h1>
+</div>

@@ -1,0 +1,11 @@
+<div class="speaker-summary">
+  <h3>
+    <%= link @speaker.name, to: speaker_path(@conn, :show, @speaker.slug) %>
+  </h3>
+  <h4>
+    <%= @speaker.company %>
+    <%= if @speaker.twitter, do: " | #{@speaker.twitter}" %>
+  </h4>
+
+  <p><%= @speaker.bio %></p>
+</div>

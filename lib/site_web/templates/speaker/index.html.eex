@@ -1,0 +1,9 @@
+<%= render SharedView, "nav.html", conn: @conn %>
+
+<div class="normal-section">
+  <h1>EMPEX Speakers</h1>
+
+  <%= for speaker <- @speakers do %>
+    <%= render "_speaker_summary.html", conn: @conn, speaker: speaker %>
+  <% end %>
+</div>
