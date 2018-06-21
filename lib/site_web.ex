@@ -41,6 +41,9 @@ defmodule SiteWeb do
       import SiteWeb.Router.Helpers
       import SiteWeb.ErrorHelpers
       import SiteWeb.Gettext
+      import SiteWeb.ViewHelpers
+
+      alias SiteWeb.SharedView
     end
   end
 

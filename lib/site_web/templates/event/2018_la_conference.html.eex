@@ -65,7 +65,7 @@
 
     <p> We&#39;d love for you to join us. Put your email address in so we can keep you up to date.</p>
 
-    <%= render "_signup.html" %>
+    <%= render SharedView, "signup.html" %>
   </section>
 </div>
 

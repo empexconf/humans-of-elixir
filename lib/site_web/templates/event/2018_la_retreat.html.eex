@@ -64,7 +64,7 @@
 
     <p> We&#39;d love for you to join us.</p>
 
-    <%= render "_signup.html" %>
+    <%= render SharedView, "signup.html" %>
   </section>
 </div>
 

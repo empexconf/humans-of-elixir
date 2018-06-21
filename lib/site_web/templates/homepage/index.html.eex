@@ -1,5 +1,3 @@
-
-
 <section id="top" class="top">
   <div class="top__content">
     <%= link to: "http://crevalle.io", target: '_blank', class: 'no-hover' do %>
@@ -27,7 +25,7 @@
           A day of training and chilling in a dope mansion with a pool.
         </p>
 
-        <%= link to: static_page_path(@conn, :la), class: "landing__button button button-dark button-sentence", data_selector: "landing-button-link" do %>
+        <%= link to: event_path(@conn, :la), class: "landing__button button button-dark button-sentence", data_selector: "landing-button-link" do %>
           More Information
         <% end %>
         
@@ -58,7 +56,7 @@
       <p>Get the updates from our small crew of Elixir enthusiasts. Expect CFP alerts, speaker announcements, or any other fun stuff we figure you might find valuable.</p>
 
       <!-- EMAIL HERE -->
-      <%= render "_signup.html" %>
+      <%= render SharedView, "signup.html" %>
 
       <img class="spiky-circle" src="/images/landing/spiky-circle.png" />
     </div>
