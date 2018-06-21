@@ -115,54 +115,6 @@ h6 {
   background-size: cover;
 }
 
-.nav {
-  @include section-color(white);
-
-  a {
-    color: white;
-  }
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-top: 3rem;
-
-  @include tablet {
-    flex-direction: row;
-  }
-
-  &__empex {
-    line-height: 1;
-    font-size: 36px;
-    text-transform: uppercase;
-  }
-
-  &__spacer {
-    flex-grow: 1;
-  }
-
-  &__links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  &__link {
-    flex-basis: 33%;
-
-    @include tablet {
-      flex-basis: auto;
-
-      margin-left: 1em;
-
-      &:first-child {
-        margin-left: 0;
-      }
-    }
-  }
-}
-
 .hero {
   @include normal-section();
 

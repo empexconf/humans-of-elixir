@@ -1,6 +1,6 @@
 <div class="hero-background">
   <section class="hero">
-    <nav class="nav">
+    <nav class="nav nav--transparent">
       <div class="nav__empex">
         <strong>Empex</strong>
         <br class="hide-tablet"/>

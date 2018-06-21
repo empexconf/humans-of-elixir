@@ -21,5 +21,7 @@ defmodule SiteWeb.Router do
     get("/la", EventController, :la)
     get("/nyc", EventController, :nyc)
     resources("/events", EventController, only: [:index, :show])
+    resources("/talks", TalkController, only: [:index, :show])
+    resources("/speakers", SpeakerController, only: [:index, :show])
   end
 end

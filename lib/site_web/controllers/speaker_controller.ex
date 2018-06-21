@@ -1,4 +1,4 @@
-defmodule SiteWeb.TalkController do
+defmodule SiteWeb.SpeakerController do
   use SiteWeb, :controller
 
   def index(conn, _params) do
