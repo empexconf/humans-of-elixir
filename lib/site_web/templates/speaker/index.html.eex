@@ -1,5 +1,9 @@
 <%= render SharedView, "nav.html", conn: @conn %>
 
+<p>
+  Meet the in crowd - all the people spoke at an EMPEX conference. When it comes to Elixir, they're the best in the business.
+</p>
+
 <div class="normal-section">
   <h1>EMPEX Speakers</h1>
 

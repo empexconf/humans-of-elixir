@@ -1,5 +1,17 @@
 <%= render SharedView, "nav.html", conn: @conn %>
 
-<div class="normal-section">
-  <h1>EMPEX Talks</h1>
+<p>
+  Here they are, all in one place - every EMPEX talk. Be entertained, and be enlightened.
+</p>
+
+<div class="talks">
+  <div class="normal-section">
+    <h1>EMPEX Talks</h1>
+  </div>
+
+  <div class="small-section">
+    <%= for talk <- @talks do %>
+      <%= render "_talk_summary.html", conn: @conn, talk: talk %>
+    <% end %>
+  </div>
 </div>

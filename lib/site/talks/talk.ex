@@ -29,6 +29,14 @@ defmodule Site.Talks.Talk do
     :speaker_bio
   ]
 
+  @spec find([t], String.t()) :: t
+  def find(talks, slug) do
+    talks
+    |> Enum.find(fn %Talk{slug: talk_slug} ->
+      talk_slug == slug
+    end)
+  end
+
   @spec talks_for_speaker([t], String.t()) :: [t]
   def talks_for_speaker(talks, speaker_slug) do
     talks

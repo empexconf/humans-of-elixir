@@ -5,6 +5,13 @@ defmodule Site.Talks do
 
   @all_talks TalkList.all()
 
+  @spec talk(String.t()) :: Talk.t()
+  def talk(slug) do
+    @all_talks
+    |> Talk.find(slug)
+  end
+
+  @spec all_talks() :: [Talk.t()]
   def all_talks() do
     @all_talks
   end
@@ -17,7 +24,7 @@ defmodule Site.Talks do
     %{talks: talks, speaker: speaker}
   end
 
-  @spec all_speakers() :: [Talk.t]
+  @spec all_speakers() :: [Talk.t()]
   def all_speakers() do
     @all_talks
     |> Talk.latest_talk_for_each_speaker()

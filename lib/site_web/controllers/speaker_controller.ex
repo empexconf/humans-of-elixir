@@ -11,8 +11,6 @@ defmodule SiteWeb.SpeakerController do
   def show(conn, %{"id" => slug}) do
     %{speaker: speaker, talks: talks} = Talks.speaker_info(slug)
 
-    IO.inspect(talks)
-
     render(conn, "show.html", year: 2018, speaker: speaker, talks: talks)
   end
 end
