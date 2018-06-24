@@ -1,30 +1,34 @@
 defmodule Site.Talks.TalkList do
-  alias Site.Talks.Talk
+  @moduledoc """
+  The list of all the talks. Used to generate talk and speaker pages.
+  """
 
-  @spec all() :: Talk.t()
+  alias Site.Talks.Talk
+  alias Site.Talks.EventList
+
+  @la_conference_2018 EventList.la_conference_2018()
+
+  @spec all() :: [Talk.t()]
   def all do
     [
       %Talk{
         title: "A Swarm of Processes — Simulating Ant Foraging Behavior with OTP",
         slug: "swarm-of-processes",
         youtube: "NKJFL9LpP4M",
-        date: "2018-02-03",
-        location: "la",
         description:
           "In this talk, we'll see a simulation of a foraging ant colony that can efficiently find and collect food, built using a separate OTP process for each ant. Along the way we'll look at GenServers, DynamicSupervisors, Registries, and more OTP goodness. We’ll also learn a little bit about ants!",
+        event: @la_conference_2018,
         speaker_name: "Will Ockelmann-Wagner",
         speaker_company: "Carbon Five",
         speaker_slug: "will-wow",
-        speaker_twitter: "WowItsWillWow",
         speaker_bio:
-          "Will is a software developer at Carbon Five. He started his career in accounting, but found that automating his job away was more fun than the actual job, and moved over to software. He’s into typed functional programming and tiny keyboards."
+          "Will is a software developer at Carbon Five. He started his career in accounting, but found that automating his job away was more fun than the actual job, and moved over to software. He’s into typed functional programming and tiny keyboards.",
+        speaker_twitter: "WowItsWillWow"
       },
       %Talk{
         title: "Ecto.Schema without Ecto.Repo",
         slug: "Rosemary Ledesma",
         youtube: "BP-f3Kcqb1A",
-        date: "2018-02-03",
-        location: "la",
         description: """
         With newer versions of Ecto you can use Ecto.Schema without even importing Ecto.Repo or setting up a traditional database. Why would you wish to?
 
@@ -34,11 +38,13 @@ defmodule Site.Talks.TalkList do
 
         I'll also discuss some of the stumbling blocks and limitations I've encountered while leveraging Ecto.Schema in this way.
         """,
+        event: @la_conference_2018,
         speaker_name: "Rosemary Ledesma",
         speaker_company: "",
         speaker_slug: "rosemary-ledesma",
         speaker_bio:
-          "Rosemary is passionate about writing software with Elixir and Phoenix, and works as a back-end software engineer for RentPath LLC. In her spare time she enjoys hiking, swing-dancing, and rowing (crew)."
+          "Rosemary is passionate about writing software with Elixir and Phoenix, and works as a back-end software engineer for RentPath LLC. In her spare time she enjoys hiking, swing-dancing, and rowing (crew).",
+        speaker_twitter: nil
       }
       # %Talk{
       #   title: "",

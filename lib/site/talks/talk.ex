@@ -1,32 +1,33 @@
 defmodule Site.Talks.Talk do
   alias __MODULE__
+  alias Site.Talks.Event
 
   @type t :: %Talk{
           title: String.t(),
           slug: String.t(),
           youtube: String.t(),
-          date: String.t(),
-          location: String.t(),
           description: String.t(),
+          event: Event.t(),
           speaker_name: String.t(),
           speaker_company: String.t(),
           speaker_slug: String.t(),
-          speaker_twitter: String.t(),
-          speaker_bio: String.t()
+          speaker_bio: String.t(),
+          speaker_twitter: String.t() | nil
         }
 
   defstruct [
     :title,
     :slug,
+    # Just the YouTube slug, like NKJFL9LpP4M
     :youtube,
-    :date,
-    :location,
     :description,
+    :event,
     :speaker_name,
     :speaker_company,
     :speaker_slug,
-    :speaker_twitter,
-    :speaker_bio
+    :speaker_bio,
+    # Just the username
+    :speaker_twitter
   ]
 
   @spec find([t], String.t()) :: t
