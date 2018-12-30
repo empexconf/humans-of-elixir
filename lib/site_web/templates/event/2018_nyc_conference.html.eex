@@ -62,7 +62,7 @@
           <a href="#organizers" class="navbar-link">Organizers</a>
         </li>
         <li class="navbar-item">
-          <a href="/events.html" class="navbar-link">Past Events</a>
+          <a href="/events" class="navbar-link">Past Events</a>
         </li>
       </ul>
     </div>
