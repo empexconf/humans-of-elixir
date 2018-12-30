@@ -73,11 +73,11 @@
 }
 
 .hero-card {
+  @include section-color($bodyColor);
+
   box-sizing: border-box;
   width: 100%;
   cursor: pointer;
-
-  color: $bodyColor;
 
   margin-top: 42px;
   &:first-child {

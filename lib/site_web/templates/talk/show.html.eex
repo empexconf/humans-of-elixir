@@ -1,0 +1,11 @@
+<%= render SharedView, "nav.html", conn: @conn %>
+
+<div class="normal-section">
+  <h1><%= @talk.title %></h1>
+</div>
+
+<div class="small-section">
+  <%= render "_video_embed.html", talk: @talk %>
+
+  <p><%= @talk.description %></p>
+</div>

@@ -1,0 +1,15 @@
+<nav class="nav">
+  <div class="nav__empex">
+    <strong>
+      <%= link "Empex", to: homepage_path(@conn, :index) %>
+    </strong>
+  </div>
+
+  <div class="nav__spacer"></div>
+
+  <div class="nav__links">
+    <%= link "Events", to: event_path(@conn, :index), class: "nav__link" %>
+    <%= link "Talks", to: talk_path(@conn, :index), class: "nav__link" %>
+    <%= link "Speakers", to: speaker_path(@conn, :index), class: "nav__link" %>
+  </div>
+</nav>

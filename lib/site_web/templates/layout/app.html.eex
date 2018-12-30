@@ -36,7 +36,7 @@
     <meta property="og:image" content="<%= static_path(@conn, "/images/flag.jpg") %>" />
   </head>
 
-  <body class="body <%= if assigns[:year], do: "style-#{assigns[:year]}" %>">
+  <body>
     <%= render @view_module, @view_template, assigns %>
 
     <script

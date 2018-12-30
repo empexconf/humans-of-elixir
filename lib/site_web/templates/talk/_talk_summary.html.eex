@@ -1,0 +1,5 @@
+<h3><%= link @talk.title, to: talk_path(@conn, :show, @talk.slug) %></h3>
+
+<%= render "_video_embed.html", talk: @talk %>
+
+<p><%= @talk.description %></p>

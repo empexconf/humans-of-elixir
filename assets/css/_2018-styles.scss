@@ -19,7 +19,21 @@ $tablet-width: $small-section-width;
   }
 }
 
+@mixin section-color($color) {
+  color: $color;
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color;
+  }
+}
+
 @mixin normal-section {
+  @include section-color(black);
   max-width: $page-width;
   margin-left: auto;
   margin-right: auto;
@@ -27,6 +41,7 @@ $tablet-width: $small-section-width;
 }
 
 @mixin small-section {
+  @include section-color(black);
   max-width: $small-section-width;
   margin-left: auto;
   margin-right: auto;
@@ -44,6 +59,14 @@ $tablet-width: $small-section-width;
     @include media-tablet() {
       display: none;
     }
+  }
+
+  .small-section {
+    @include small-section;
+  }
+
+  .normal-section {
+    @include normal-section;
   }
 
   &.body {

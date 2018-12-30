@@ -17,8 +17,11 @@ defmodule SiteWeb.Router do
     # Use the default browser stack
     pipe_through(:browser)
 
-    get("/", StaticPageController, :index)
-    get("/la", StaticPageController, :la)
-    get("/events/:year/:city/:type", StaticPageController, :show)
+    resources("/", HomepageController, only: [:index])
+    get("/la", EventController, :la)
+    get("/nyc", EventController, :nyc)
+    resources("/events", EventController, only: [:index, :show])
+    resources("/talks", TalkController, only: [:index, :show])
+    resources("/speakers", SpeakerController, only: [:index, :show])
   end
 end
