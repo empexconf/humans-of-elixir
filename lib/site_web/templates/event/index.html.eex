@@ -1,38 +1,37 @@
-<%= render SharedView, "nav.html", conn: @conn %>
+<div class="body style-2018">
+  <%= render SharedView, "nav.html", conn: @conn %>
 
-<div class="normal-section">
-  <h1>Past Events</h1>
-  
-  <h2>2018</h2>
+  <div class="normal-section">
+    <h1>Past Events</h1>
 
-  <ul>
-    <li>
-      <%= link "LA Civic Hack Retreat", to: event_path(@conn, :show, "la-retreat-2018") %>
-    </li>
-    <li>
-      <%= link "Empire City Elixir Conference 2018", to: event_path(@conn, :show, "nyc-retreat-2018") %>
-    </li>
-    <li>
-      <%= link "EMPEX LA 2018", to: event_path(@conn, :show, "la-conference-2018") %>
-    </li>
-  </ul>
+    <h2>2018</h2>
 
-  <h2>2017</h2>
+    <ul>
+      <li>
+        <%= link "Empire City Elixir Conference 2018", to: event_path(@conn, :show, "nyc-conference-2018") %>
+      </li>
+      <li>
+        <%= link "EMPEX LA 2018", to: event_path(@conn, :show, "la-conference-2018") %>
+      </li>
+    </ul>
 
-  <ul>
-    <li>
-      <%= link "Empire City Elixir Conference 2017", to: event_path(@conn, :show, "nyc-retreat-2017") %>
-    </li>
-  </ul>
+    <h2>2017</h2>
 
-  <h2>2016</h2>
+    <ul>
+      <li>
+        <%= link "Empire City Elixir Conference 2017", to: event_path(@conn, :show, "nyc-conference-2017") %>
+      </li>
+    </ul>
 
-  <ul>
-    <li>
-      <%= link "Empire City Elixir Conference 2016", to: event_path(@conn, :show, "nyc-retreat-2016") %>
-    </li>
-    <li>
-      <%= link "Halloween Lightning Talks 2016", to: event_path(@conn, :show, "nyc-lightning-2016") %>
-    </li>
-  </ul>
+    <h2>2016</h2>
+
+    <ul>
+      <li>
+        <%= link "Empire City Elixir Conference 2016", to: event_path(@conn, :show, "nyc-conference-2016") %>
+      </li>
+      <li>
+        <%= link "Halloween Lightning Talks 2016", to: event_path(@conn, :show, "nyc-lightning-2016") %>
+      </li>
+    </ul>
+  </div>
 </div>

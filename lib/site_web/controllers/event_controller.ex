@@ -2,11 +2,11 @@ defmodule SiteWeb.EventController do
   use SiteWeb, :controller
 
   def index(conn, _params) do
-    render(conn, "index.html", year: 2018)
+    render(conn, "index.html", year: 2019)
   end
 
   def la(conn, _params) do
-    render(conn, "2018_la_retreat.html", year: 2018, title: "EMPEX LA Civic Hack Retreat 2018")
+    render(conn, "2019_la_conference.html", year: 2019, title: "EMPEX LA 2019")
   end
 
   def show(conn, %{"id" => slug}) do
