@@ -4,7 +4,7 @@
     <header id="header" class="header container">
       <a href="http://crevalle.io/" target="_blank" class="no-hover">
         <img
-          src="/assets/images/sponsors/crevalle-footer-1afc54fb.png"
+          src="<%= static_path(@conn, "/images/sponsors/crevalle-footer.png") %>"
           alt="Crevalle"
           title="Crevalle"
           class="crevalle-name"
@@ -122,7 +122,7 @@
                     style="width: 678px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/1-2902b347.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/1.jpg") %>"
                       alt="1"
                     />
                   </div>
@@ -136,7 +136,7 @@
                     style="width: 678px; position: relative; left: -678px; top: 0px; z-index: 998; opacity: 0;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/10-a037264c.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/10.jpg") %>"
                       alt="10"
                     />
                   </div>
@@ -150,7 +150,7 @@
                     style="width: 678px; position: relative; left: -1356px; top: 0px; z-index: 998; opacity: 0;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/3-e2ad9f9a.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/3.jpg") %>"
                       alt="3"
                     />
                   </div>
@@ -164,7 +164,7 @@
                     style="width: 678px; position: relative; left: -2034px; top: 0px; z-index: 998; opacity: 0;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/6-c2543f89.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/6.jpg") %>"
                       alt="6"
                     />
                   </div>
@@ -178,7 +178,7 @@
                     style="width: 678px; position: relative; left: -2712px; top: 0px; z-index: 998; opacity: 0;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/9-e7a080cf.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/9.jpg") %>"
                       alt="9"
                     />
                   </div>
@@ -192,7 +192,7 @@
                     style="width: 678px; position: relative; left: -3390px; top: 0px; z-index: 998; opacity: 0;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/5-8b5bb019.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/5.jpg") %>"
                       alt="5"
                     />
                   </div>
@@ -206,7 +206,7 @@
                     style="width: 678px; position: relative; left: -4068px; top: 0px; z-index: 998; opacity: 0;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/2-964a2501.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/2.jpg") %>"
                       alt="2"
                     />
                   </div>
@@ -236,7 +236,7 @@
                     style="width: 220px;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/6-c2543f89.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/6.jpg") %>"
                       class="carousel-image"
                       alt="6"
                     />
@@ -249,7 +249,7 @@
                     style="width: 220px;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/9-e7a080cf.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/9.jpg") %>"
                       class="carousel-image"
                       alt="9"
                     />
@@ -262,7 +262,7 @@
                     style="width: 220px;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/5-8b5bb019.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/5.jpg") %>"
                       class="carousel-image"
                       alt="5"
                     />
@@ -275,7 +275,7 @@
                     style="width: 220px;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/2-964a2501.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/2.jpg") %>"
                       class="carousel-image"
                       alt="2"
                     />
@@ -290,7 +290,7 @@
                     style="width: 220px;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/1-2902b347.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/1.jpg") %>"
                       class="carousel-image"
                       alt="1"
                     />
@@ -305,7 +305,7 @@
                     style="width: 220px;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/10-a037264c.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/10.jpg") %>"
                       class="carousel-image"
                       alt="10"
                     />
@@ -320,7 +320,7 @@
                     style="width: 220px;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/3-e2ad9f9a.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/3.jpg") %>"
                       class="carousel-image"
                       alt="3"
                     />
@@ -335,7 +335,7 @@
                     style="width: 220px;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/6-c2543f89.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/6.jpg") %>"
                       class="carousel-image"
                       alt="6"
                     />
@@ -350,7 +350,7 @@
                     style="width: 220px;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/9-e7a080cf.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/9.jpg") %>"
                       class="carousel-image"
                       alt="9"
                     />
@@ -365,7 +365,7 @@
                     style="width: 220px;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/5-8b5bb019.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/5.jpg") %>"
                       class="carousel-image"
                       alt="5"
                     />
@@ -380,7 +380,7 @@
                     style="width: 220px;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/2-964a2501.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/2.jpg") %>"
                       class="carousel-image"
                       alt="2"
                     />
@@ -393,7 +393,7 @@
                     style="width: 220px;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/1-2902b347.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/1.jpg") %>"
                       class="carousel-image"
                       alt="1"
                     />
@@ -406,7 +406,7 @@
                     style="width: 220px;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/10-a037264c.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/10.jpg") %>"
                       class="carousel-image"
                       alt="10"
                     />
@@ -419,7 +419,7 @@
                     style="width: 220px;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/3-e2ad9f9a.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/3.jpg") %>"
                       class="carousel-image"
                       alt="3"
                     />
@@ -432,7 +432,7 @@
                     style="width: 220px;"
                   >
                     <img
-                      src="/assets/images/locations/subculture/6-c2543f89.jpg"
+                      src="<%= static_path(@conn, "/images/locations/subculture/6.jpg") %>"
                       class="carousel-image"
                       alt="6"
                     />
@@ -609,7 +609,7 @@
             <div class="presentation-presenter">
               <div class="presentation-presenter__avatar-container">
                 <img
-                  src="/assets/images/people/presenters/zelenka-brooklyn-2c1aad3a.jpg"
+                  src="<%= static_path(@conn, "/images/people/presenters/zelenka-brooklyn.jpg") %>"
                   class="presentation-presenter__avatar"
                   alt="Zelenka brooklyn"
                 />
@@ -653,7 +653,7 @@
             <div class="presentation-presenter">
               <div class="presentation-presenter__avatar-container">
                 <img
-                  src="/assets/images/people/presenters/thomas-dave-ea66ffb6.png"
+                  src="<%= static_path(@conn, "/images/people/presenters/thomas-dave.png") %>"
                   class="presentation-presenter__avatar"
                   alt="Thomas dave"
                 />
@@ -710,7 +710,7 @@
               <div class="presentation-presenter">
                 <div class="presentation-presenter__avatar-container">
                   <img
-                    src="/assets/images/people/presenters/bill-peregoy-f0e6d563.jpg"
+                    src="<%= static_path(@conn, "/images/people/presenters/bill-peregoy.jpg") %>"
                     class="presentation-presenter__avatar"
                     alt="Bill Peregoy"
                   />
@@ -763,7 +763,7 @@
               <div class="presentation-presenter">
                 <div class="presentation-presenter__avatar-container">
                   <img
-                    src="/assets/images/people/presenters/james-lavin-cafcda72.jpg"
+                    src="<%= static_path(@conn, "/images/people/presenters/james-lavin.jpg") %>"
                     class="presentation-presenter__avatar"
                     alt="James Lavin"
                   />
@@ -807,7 +807,7 @@
               <div class="presentation-presenter">
                 <div class="presentation-presenter__avatar-container">
                   <img
-                    src="/assets/images/people/presenters/jeff-smith-3598d2fb.jpg"
+                    src="<%= static_path(@conn, "/images/people/presenters/jeff-smith.jpg") %>"
                     class="presentation-presenter__avatar"
                     alt="Jeff Smith"
                   />
@@ -870,7 +870,7 @@
               <div class="presentation-presenter">
                 <div class="presentation-presenter__avatar-container">
                   <img
-                    src="/assets/images/people/presenters/kate-travers-affd6c21.jpg"
+                    src="<%= static_path(@conn, "/images/people/presenters/kate-travers.jpg") %>"
                     class="presentation-presenter__avatar"
                     alt="Kate Travers"
                   />
@@ -916,7 +916,7 @@
               <div class="presentation-presenter">
                 <div class="presentation-presenter__avatar-container">
                   <img
-                    src="/assets/images/people/presenters/mat-trudel-09f78371.jpg"
+                    src="<%= static_path(@conn, "/images/people/presenters/mat-trudel.jpg") %>"
                     class="presentation-presenter__avatar"
                     alt="Mat Trudel"
                   />
@@ -967,7 +967,7 @@
               <div class="presentation-presenter">
                 <div class="presentation-presenter__avatar-container">
                   <img
-                    src="/assets/images/people/presenters/robert-beene-9692da2c.jpg"
+                    src="<%= static_path(@conn, "/images/people/presenters/robert-beene.jpg") %>"
                     class="presentation-presenter__avatar"
                     alt="Robert Beene"
                   />
@@ -1020,7 +1020,7 @@
               <div class="presentation-presenter">
                 <div class="presentation-presenter__avatar-container">
                   <img
-                    src="/assets/images/people/presenters/shanti-chellaram-0027e647.jpg"
+                    src="<%= static_path(@conn, "/images/people/presenters/shanti-chellaram.jpg") %>"
                     class="presentation-presenter__avatar"
                     alt="Shanti Chellaram"
                   />
@@ -1063,7 +1063,7 @@
               <div class="presentation-presenter">
                 <div class="presentation-presenter__avatar-container">
                   <img
-                    src="/assets/images/people/presenters/sophie-debenedetto-72acbb7e.jpg"
+                    src="<%= static_path(@conn, "/images/people/presenters/sophie-debenedetto.jpg") %>"
                     class="presentation-presenter__avatar"
                     alt="Sophie DeBenedetto"
                   />
@@ -1132,7 +1132,7 @@
               <div class="presentation-presenter">
                 <div class="presentation-presenter__avatar-container">
                   <img
-                    src="/assets/images/people/presenters/wojtek-mach-6b14b4b4.jpg"
+                    src="<%= static_path(@conn, "/images/people/presenters/wojtek-mach.jpg") %>"
                     class="presentation-presenter__avatar"
                     alt="Wojtek Mach"
                   />
@@ -1197,7 +1197,7 @@
             <div class="presentation-presenter">
               <div class="presentation-presenter__avatar-container">
                 <img
-                  src="/assets/images/people/presenters/andrea-leopardi-9842fccc.jpg"
+                  src="<%= static_path(@conn, "/images/people/presenters/andrea-leopardi.jpg") %>"
                   class="presentation-presenter__avatar"
                   alt="Andrea Leopardi"
                 />
@@ -1211,7 +1211,7 @@
               <br />
               <div class="presentation-presenter__avatar-container">
                 <img
-                  src="/assets/images/people/presenters/eric-meadows-jonsson-90e77ea0.jpg"
+                  src="<%= static_path(@conn, "/images/people/presenters/eric-meadows-jonsson.jpg") %>"
                   class="presentation-presenter__avatar"
                   alt="Eric Meadows-Jönsson"
                 />
@@ -1276,7 +1276,7 @@
             <div class="presentation-presenter">
               <div class="presentation-presenter__avatar-container">
                 <img
-                  src="/assets/images/people/presenters/andy-mccown-78385782.jpg"
+                  src="<%= static_path(@conn, "/images/people/presenters/andy-mccown.jpg") %>"
                   class="presentation-presenter__avatar"
                   alt="Andy McCown"
                 />
@@ -1384,7 +1384,7 @@
         <section class="organizer-list">
           <section class="organizer">
             <img
-              src="/assets/images/people/organizers/antaramian-david-312c53a0.jpg"
+              src="<%= static_path(@conn, "/images/people/organizers/antaramian-david.jpg") %>"
               alt="Antaramian david"
             />
             <div class="bd">
@@ -1404,7 +1404,7 @@
 
           <section class="organizer">
             <img
-              src="/assets/images/people/organizers/bell-chris-ecc01da1.jpg"
+              src="<%= static_path(@conn, "/images/people/organizers/bell-chris.jpg") %>"
               alt="Bell chris"
             />
             <div class="bd">
@@ -1415,7 +1415,7 @@
 
           <section class="organizer">
             <img
-              src="/assets/images/people/organizers/denkinger-troy-6da96642.jpg"
+              src="<%= static_path(@conn, "/images/people/organizers/denkinger-troy.jpg") %>"
               alt="Denkinger troy"
             />
             <div class="bd">
@@ -1431,7 +1431,7 @@
 
           <section class="organizer">
             <img
-              src="/assets/images/people/organizers/denkinger-lisa-3e9f923d.jpg"
+              src="<%= static_path(@conn, "/images/people/organizers/denkinger-lisa.jpg") %>"
               alt="Denkinger lisa"
             />
             <div class="bd">
@@ -1444,7 +1444,7 @@
 
           <section class="organizer">
             <img
-              src="/assets/images/people/organizers/hood-helen-b69e7c74.jpg"
+              src="<%= static_path(@conn, "/images/people/organizers/hood-helen.jpg") %>"
               alt="Helen Hood"
             />
             <div class="bd">
@@ -1455,7 +1455,7 @@
 
           <section class="organizer">
             <img
-              src="/assets/images/people/organizers/mccown-andy-78385782.jpg"
+              src="<%= static_path(@conn, "/images/people/organizers/mccown-andy.jpg") %>"
               alt="Mccown andy"
             />
             <div class="bd">
@@ -1466,7 +1466,7 @@
 
           <section class="organizer">
             <img
-              src="/assets/images/people/organizers/nussbaum-lee-e849239e.jpg"
+              src="<%= static_path(@conn, "/images/people/organizers/nussbaum-lee.jpg") %>"
               alt="Nussbaum lee"
             />
             <div class="bd">
@@ -1477,7 +1477,7 @@
 
           <section class="organizer">
             <img
-              src="/assets/images/people/organizers/price-cameron-34880b4e.jpg"
+              src="<%= static_path(@conn, "/images/people/organizers/price-cameron.jpg") %>"
               alt="Price cameron"
             />
             <div class="bd">
@@ -1549,7 +1549,7 @@
             ©
             <a href="#" target="_blank" class="no-hover">
               <img
-                src="/assets/images/sponsors/crevalle-footer-1afc54fb.png"
+                src="<%= static_path(@conn, "/images/sponsors/crevalle-footer.png") %>"
                 alt="Crevalle"
                 title="Crevalle"
                 class="crevalle-name"
