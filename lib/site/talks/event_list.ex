@@ -8,21 +8,24 @@ defmodule Site.Talks.EventList do
   @spec event(slug :: String.t) :: Event.t()
   def event("la_conference_2019") do
     %Event{
-      date: "February 2, 2019",
+      name: "2019 EMPEX Los Angeles",
+      date: "2019-02-02",
       location: "Los Angeles"
     }
   end
 
   def event("la_conference_2018") do
     %Event{
-      date: "February 10, 2018",
+      name: "2018 EMPEX Los Angeles",
+      date: "2018-02-10",
       location: "Los Angeles"
     }
   end
 
   def event("nyc_conference_2018") do
     %Event{
-      date: "May 17, 2018",
+      name: "2018 EMPEX Los Angeles",
+      date: "2018-05-17",
       location: "New York City"
     }
   end

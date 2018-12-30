@@ -10,8 +10,14 @@
   </div>
 
   <div class="small-section">
-    <%= for talk <- @talks do %>
-      <%= render "_talk_summary.html", conn: @conn, talk: talk %>
+    <%= for {event, talks} <- Talks.group_by_event(@talks) do %>
+      <h2>
+        <%= event.name %>
+      </h2>
+
+      <%= for talk <- talks do %>
+        <%= render "_talk_summary.html", conn: @conn, talk: talk %>
+      <% end %>
     <% end %>
   </div>
 </div>

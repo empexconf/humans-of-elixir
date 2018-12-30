@@ -1,6 +1,7 @@
 defmodule Site.Talks.Talk do
   alias __MODULE__
   alias Site.Talks.Event
+  alias Site.Talks.Speaker
 
   @type t :: %Talk{
           title: String.t(),

@@ -1,7 +1,8 @@
 defmodule Site.Talks do
+  alias Site.Talks.Event
+  alias Site.Talks.Speaker
   alias Site.Talks.Talk
   alias Site.Talks.TalkList
-  alias Site.Talks.Speaker
 
   @all_talks TalkList.all()
 
@@ -16,7 +17,7 @@ defmodule Site.Talks do
     @all_talks
   end
 
-  @spec speaker_info(String.t()) :: %{talks: [Talk.t()], speaker: Speaker.t()}
+  @spec speaker_info(speaker_slug :: String.t()) :: %{talks: [Talk.t()], speaker: Speaker.t()}
   def speaker_info(speaker_slug) do
     talks = Talk.talks_for_speaker(@all_talks, speaker_slug)
 
@@ -31,5 +32,15 @@ defmodule Site.Talks do
   def all_speakers() do
     @all_talks
     |> Talk.speakers()
+  end
+
+  @spec group_by_event(talks :: [Talk.t()]) :: [{Event.t(), Talk.t()}]
+  def group_by_event(talks) do
+    talks
+    |> Enum.group_by(fn talk -> talk.event end)
+    |> Enum.sort_by(fn {event, _talks} ->
+      event.date
+    end)
+    |> Enum.reverse()
   end
 end
