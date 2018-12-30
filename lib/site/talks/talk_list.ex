@@ -1,3 +1,5 @@
+NimbleCSV.define(TalkParser, separator: ",")
+
 defmodule Site.Talks.TalkList do
   @moduledoc """
   The list of all the talks. Used to generate talk and speaker pages.
@@ -5,60 +7,76 @@ defmodule Site.Talks.TalkList do
 
   alias Site.Talks.Talk
   alias Site.Talks.EventList
-
-  @la_conference_2018 EventList.la_conference_2018()
+  alias Site.Talks.Speaker
 
   @spec all() :: [Talk.t()]
   def all do
+    "lib/site/talks/talks.csv"
+    |> File.stream!()
+    |> TalkParser.parse_stream()
+    |> Enum.map(&from_row/1)
+  end
+
+  defp from_row(row) do
     [
-      %Talk{
-        title: "A Swarm of Processes — Simulating Ant Foraging Behavior with OTP",
-        slug: "swarm-of-processes",
-        youtube: "NKJFL9LpP4M",
-        description:
-          "In this talk, we'll see a simulation of a foraging ant colony that can efficiently find and collect food, built using a separate OTP process for each ant. Along the way we'll look at GenServers, DynamicSupervisors, Registries, and more OTP goodness. We’ll also learn a little bit about ants!",
-        event: @la_conference_2018,
-        speaker_name: "Will Ockelmann-Wagner",
-        speaker_company: "Carbon Five",
-        speaker_slug: "will-wow",
-        speaker_bio:
-          "Will is a software developer at Carbon Five. He started his career in accounting, but found that automating his job away was more fun than the actual job, and moved over to software. He’s into typed functional programming and tiny keyboards.",
-        speaker_twitter: "WowItsWillWow"
-      },
-      %Talk{
-        title: "Ecto.Schema without Ecto.Repo",
-        slug: "Rosemary Ledesma",
-        youtube: "BP-f3Kcqb1A",
-        description: """
-        With newer versions of Ecto you can use Ecto.Schema without even importing Ecto.Repo or setting up a traditional database. Why would you wish to?
+      event,
+      title,
+      slug,
+      youtube,
+      description,
+      speaker_name,
+      speaker_slug,
+      speaker_company,
+      speaker_bio,
+      speaker_twitter
+    ] = row
 
-        Your microservice or other lightweight app may not use a database but you'll probably still need to wrangle some serious data: complex params, JSON request/response bodies, RabbitMQ payloads, etc. That's data that you'll need to parse, cast, and validate.
+    %Talk{
+      title: title,
+      slug: slug,
+      youtube: youtube,
+      description: description,
+      event: EventList.event(event),
+      speakers:
+        make_speakers(speaker_name, speaker_slug, speaker_company, speaker_bio, speaker_twitter)
+    }
+  end
 
-        I'll step you through how to use Ecto.Schema on its own to cast and validate various kinds of data, and how to extract the final results whether the data is valid or invalid.
+  defp make_speakers(
+         name,
+         slug,
+         company,
+         bio,
+         twitter
+       ) do
+    name = parse_speaker_data(name)
+    company = parse_speaker_data(company)
+    slug = parse_speaker_data(slug)
+    bio = parse_speaker_data(bio)
+    twitter = parse_speaker_data(twitter)
 
-        I'll also discuss some of the stumbling blocks and limitations I've encountered while leveraging Ecto.Schema in this way.
-        """,
-        event: @la_conference_2018,
-        speaker_name: "Rosemary Ledesma",
-        speaker_company: "",
-        speaker_slug: "rosemary-ledesma",
-        speaker_bio:
-          "Rosemary is passionate about writing software with Elixir and Phoenix, and works as a back-end software engineer for RentPath LLC. In her spare time she enjoys hiking, swing-dancing, and rowing (crew).",
-        speaker_twitter: nil
-      }
-      # %Talk{
-      #   title: "",
-      #   slug: "",
-      #   youtube: "",
-      #   date: "",
-      #   location: "",
-      #   description: "",
-      #   speaker_name: "",
-      #   speaker_company: "",
-      #   speaker_slug: "",
-      #   speaker_twitter: "",
-      #   speaker_bio: ""
-      # }
-    ]
+    [name, company, slug, bio, twitter]
+    |> Enum.zip()
+    |> Enum.map(fn {name, company, slug, bio, twitter} ->
+      Speaker.new(
+        name: name,
+        company: company,
+        slug: slug,
+        bio: bio,
+        twitter: twitter
+      )
+    end)
+  end
+
+  defp parse_speaker_data(data) do
+    data
+    |> case do
+      "[\"" <> _ ->
+        {list, _} = Code.eval_string(data)
+        list
+
+      _ ->
+        [data]
+    end
   end
 end

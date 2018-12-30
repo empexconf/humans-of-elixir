@@ -534,15 +534,6 @@
               Nulls are a fact of life—sometimes a value can be absent, which is important information to have However if a variable can be null, we often have to write extra code to handle that possibility. How can we utilize functional, typed languages to only allow null where it communicates important information and eliminate it everywhere else? This talk will identify patterns to do just that and discuss how they can help shape your application’s architecture.
             </p>
           </div>
-
-          <div class="presentation__bio">
-            <p>
-              <strong>About Bruce:</strong>
-              Bruce currently works as a developer at a company called Versus Systems based in Los Angeles, California. He occasionally contributes to Elixir open source libraries such as ESpec, a popular testing framework.
-
-              In his spare time, he likes reading Tom Clancy novels and swimming along with a cup of coffee.
-            </p>
-          </div>
         </div>
       </section>
 
@@ -582,12 +573,14 @@
             </p>
           </div>
 
-          <%# <div class="presentation__bio">
+          <div class="presentation__bio">
             <p>
-              <strong>About NAME:</strong>
-              BODY
+              <strong>About Bruce:</strong>
+              Bruce currently works as a developer at a company called Versus Systems based in Los Angeles, California. He occasionally contributes to Elixir open source libraries such as ESpec, a popular testing framework.
+
+              In his spare time, he likes reading Tom Clancy novels and swimming along with a cup of coffee.
             </p>
-          </div> %>
+          </div>
         </div>
       </section>
 

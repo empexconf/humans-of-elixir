@@ -5,16 +5,22 @@ defmodule Site.Talks.EventList do
 
   alias Site.Talks.Event
 
-  @spec la_conference_2018() :: Event.t()
-  def la_conference_2018 do
+  @spec event(slug :: String.t) :: Event.t()
+  def event("la_conference_2019") do
     %Event{
-      date: "February 2, 2018",
+      date: "February 2, 2019",
       location: "Los Angeles"
     }
   end
 
-  @spec nyc_conference_2018() :: Event.t()
-  def nyc_conference_2018 do
+  def event("la_conference_2018") do
+    %Event{
+      date: "February 10, 2018",
+      location: "Los Angeles"
+    }
+  end
+
+  def event("nyc_conference_2018") do
     %Event{
       date: "May 17, 2018",
       location: "New York City"

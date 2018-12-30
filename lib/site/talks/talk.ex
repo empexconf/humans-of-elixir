@@ -8,11 +8,7 @@ defmodule Site.Talks.Talk do
           youtube: String.t(),
           description: String.t(),
           event: Event.t(),
-          speaker_name: String.t(),
-          speaker_company: String.t(),
-          speaker_slug: String.t(),
-          speaker_bio: String.t(),
-          speaker_twitter: String.t() | nil
+          speakers: [Speaker.t()]
         }
 
   defstruct [
@@ -22,12 +18,7 @@ defmodule Site.Talks.Talk do
     :youtube,
     :description,
     :event,
-    :speaker_name,
-    :speaker_company,
-    :speaker_slug,
-    :speaker_bio,
-    # Just the username
-    :speaker_twitter
+    :speakers
   ]
 
   @spec find([t], String.t()) :: t
@@ -44,10 +35,10 @@ defmodule Site.Talks.Talk do
     |> Enum.filter(&talk_belongs_to_speaker(&1, speaker_slug))
   end
 
-  @spec latest_talk_for_each_speaker([t]) :: [t]
-  def latest_talk_for_each_speaker(talks) do
+  def speakers(talks) do
     talks
-    |> Enum.uniq_by(fn %Talk{speaker_slug: speaker_slug} -> speaker_slug end)
+    |> Enum.flat_map(fn talk -> talk.speakers end)
+    |> Enum.uniq()
   end
 
   @spec youtube_link(Talk.t()) :: String.t()
@@ -56,6 +47,10 @@ defmodule Site.Talks.Talk do
   end
 
   @spec talk_belongs_to_speaker(t, String.t()) :: boolean
-  defp talk_belongs_to_speaker(%Talk{speaker_slug: speaker_slug}, speaker_slug), do: true
-  defp talk_belongs_to_speaker(_talk, _speaker_slug), do: false
+  defp talk_belongs_to_speaker(%Talk{speakers: speakers}, speaker_slug) do
+    speakers
+    |> Enum.any?(fn speaker ->
+      speaker.slug == speaker_slug
+    end)
+  end
 end

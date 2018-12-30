@@ -1,6 +1,5 @@
 defmodule Site.Talks.Speaker do
   alias __MODULE__
-  alias Site.Talks.Talk
 
   @type t :: %Speaker{
           name: String.t(),
@@ -18,20 +17,30 @@ defmodule Site.Talks.Speaker do
     :bio
   ]
 
-  @spec from_talk(Talk.t()) :: t
-  def from_talk(%Talk{
-        speaker_name: name,
-        speaker_company: company,
-        speaker_slug: slug,
-        speaker_twitter: twitter,
-        speaker_bio: bio
-      }) do
-    %Speaker{
-      name: name,
-      company: company,
-      slug: slug,
-      twitter: twitter,
-      bio: bio
-    }
+  @spec new(
+          name: String.t(),
+          company: String.t(),
+          slug: String.t(),
+          twitter: String.t(),
+          bio: String.t()
+        ) :: t
+  def new(args) do
+    struct!(Speaker, args)
+  end
+
+  def summary_data(speaker) do
+    [
+      speaker.company,
+      format_twitter(speaker.twitter)
+    ]
+    |> Enum.reject(fn value -> value == "" end)
+    |> Enum.join(" | ")
+  end
+
+  def format_twitter(twitter) do
+    case twitter do
+      "" -> ""
+      twitter -> "@#{twitter}"
+    end
   end
 end
