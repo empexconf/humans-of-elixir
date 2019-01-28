@@ -1,13 +1,18 @@
 <%= render SharedView, "nav.html", conn: @conn %>
 
-<p>
-  Meet the in crowd - all the people spoke at an EMPEX conference. When it comes to Elixir, they're the best in the business.
-</p>
+<div class="body style-2018 speakers">
+  <div class="normal-section">
+    <h1>EMPEX Speakers</h1>
+    <p>
+      Meet the in crowd - all the people spoke at an EMPEX conference. When it comes to Elixir, they're the best in the business.
+    </p>
+  </div>
 
-<div class="normal-section">
-  <h1>EMPEX Speakers</h1>
-
-  <%= for speaker <- @speakers do %>
-    <%= render "_speaker_summary.html", conn: @conn, speaker: speaker %>
-  <% end %>
+  <div class="normal-section speakers__list">
+    <%= for speaker <- @speakers do %>
+      <div class="speakers__speaker">
+        <%= render "_speaker_summary.html", conn: @conn, speaker: speaker %>
+      </div>
+    <% end %>
+  </div>
 </div>

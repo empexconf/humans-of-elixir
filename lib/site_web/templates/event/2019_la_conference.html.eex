@@ -33,6 +33,7 @@
           <a class="nav__link" href="#organizers">
             Organizers
           </a>
+          <%= link "Past Events", to: event_path(@conn, :index), class: "nav__link" %>
           <span class="nav__link">
             <!-- spacer -->
           </span>

@@ -3,8 +3,12 @@
     <%= link @speaker.name, to: speaker_path(@conn, :show, @speaker.slug) %>
   </h3>
   <h4>
-    <%= Speaker.summary_data(@speaker) %>
+    <%= SpeakerView.summary_data(@speaker) %>
   </h4>
 
-  <p><%= @speaker.bio %></p>
+  <div class="speaker__bio">
+    <%= @speaker.bio %>
+  </div>
+
+  <br />
 </div>
