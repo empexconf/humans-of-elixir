@@ -1,0 +1,17 @@
+.speaker__bio {
+  color: $subtleColor;
+  font-size: 1.1em;
+}
+
+.speaker__info {
+  & > * {
+    &::after {
+      content: " | ";
+    }
+    &:last-child {
+      &::after {
+        content: "";
+      }
+    }
+  }
+}

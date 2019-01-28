@@ -19,7 +19,7 @@
           <h2 class="hero-card__city">Los Angeles</h2>
           <p class="hero-card__date">February 2, 2019</p>
           <p class="hero-card__description">
-            A sophisticated conference series for the Elixir programming language and ecosystem held in Los Angeles.
+            A sophisticated conference series that covers a wide range of topics with a focus on Elixir held in Los Angeles.
             We present a single track of technical talks in a fun space in downtown LA.
           </p>
 
@@ -41,10 +41,6 @@
 
           <a class="landing__button button button-dark button-sentence" href="/nyc" data-selector="landing-button-link">
             More Information
-          </a>
-
-          <a class="landing__button button button-white button-sentence" href="https://ti.to/empex-nyc/empex-nyc-2018">
-            Get Your Tickets!
           </a>
         </div>
       </div>

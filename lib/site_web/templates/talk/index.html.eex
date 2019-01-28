@@ -1,12 +1,12 @@
 <%= render SharedView, "nav.html", conn: @conn %>
 
-<p>
-  Here they are, all in one place - every EMPEX talk. Be entertained, and be enlightened.
-</p>
-
-<div class="talks">
+<div class="body style-2018 talks">
   <div class="normal-section">
     <h1>EMPEX Talks</h1>
+
+    <p>
+      Here they are, all in one place - every EMPEX talk. Be entertained, and be enlightened.
+    </p>
   </div>
 
   <div class="small-section">

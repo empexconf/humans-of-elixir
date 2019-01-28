@@ -1,21 +1,22 @@
 <%= render SharedView, "nav.html", conn: @conn %>
 
-<div class="speaker">
+<div class="body style-2018 speaker">
   <div class="normal-section">
     <h1><%= @speaker.name %></h1>
     <h4>
-      <%= @speaker.company %>
-      <%= if @speaker.twitter, do: " | #{@speaker.twitter}" %>
+      <%= SpeakerView.summary_data(@speaker) %>
     </h4>
 
-    <p><%= @speaker.bio %></p>
+    <div class="speaker__bio">
+      <%= @speaker.bio %>
+    </div>
   </div>
 
   <div class="small-section">
     <h2>Talks<h2>
 
     <%= for talk <- @talks do %>
-      <%= render TalkView, "_talk_summary.html", talk: talk %>
+      <%= render TalkView, "_talk_summary.html", conn: @conn, talk: talk %>
     <% end %>
   </div>
 </div>

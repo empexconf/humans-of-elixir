@@ -48,6 +48,10 @@ $tablet-width: $small-section-width;
   padding: 0 $page-padding;
 }
 
+body {
+  height: 100%;
+}
+
 .style-2018 {
   .hide-mobile {
     @include media-mobile() {
@@ -72,6 +76,8 @@ $tablet-width: $small-section-width;
   &.body {
     background: white;
     color: $color0;
+    height: 100%;
+    overflow-x: hidden;
 
     h2 {
       font-size: $landing-font-size-h2;
