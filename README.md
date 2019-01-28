@@ -30,9 +30,16 @@ To create a new event page:
 
 ## Talks & Speakers
 
-To add a new Talk:
+To add new Talks and Speakers:
 
-- Add a new `%Event{}` to `Site.Talks.EventList`, if nessecary.
-- Add a new `%Talk{}` to `Site.Talks.TalkList`
+Update the talks.csv to include the new talks and associated speaker data. In some places, new speaker data will overwrite older data for the same speaker.
+
+For talks that have multiple speakers, make all speaker fields an array, like so:
+
+```csv
+"[""speaker 1 bio"", ""speaker 2 bio""]"
+```
+
+It may be helpful to import the CSV into Google Spreadsheets or something to edit it.
 
 The talk will show up in `/talks/:slug`, `/talks`, `/speakers/:speaker_slug`, and `/speakers`
