@@ -1007,21 +1007,21 @@
     <section class="sponsor-list">
       <h2>Sponsors</h2>
 
-      <%# <div class="row">
-        <div class="sponsors platinum">
-          <h3>Platinum</h3>
+      <div class="row">
+        <div class="sponsors gold">
+          <h3>Gold</h3>
 
+          <a class="image-link" target="_blank" href="https://versussystems.com">
+            <img src="<%= static_path(@conn, "/images/sponsors/versus.svg") %>" alt="Versus Systems" target="_blank" class="sponsor-list__logo" />
+          </a>
         </div>
-      </div> %>
+      </div>
 
       <div class="row">
         <div class="sponsors silver">
           <h3>Silver</h3>
           <a class="image-link" target="_blank" href="https://www.carbonfive.com">
             <img src="<%= static_path(@conn, "/images/sponsors/carbonfive.svg") %>" alt="Carbon Five" target="_blank" class="sponsor-list__logo" />
-          </a>
-          <a class="image-link" target="_blank" href="https://versussystems.com">
-            <img src="<%= static_path(@conn, "/images/sponsors/versus.png") %>" alt="Versus Systems" target="_blank" class="sponsor-list__logo" />
           </a>
         </div>
       </div>

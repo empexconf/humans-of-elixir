@@ -14,69 +14,60 @@ defmodule Site.Talks.TalkList do
     "lib/site/talks/talks.csv"
     |> File.stream!()
     |> TalkParser.parse_stream()
-    |> Enum.map(&from_row/1)
+    |> Enum.reduce([], &from_rows/2)
+    |> Enum.reverse()
   end
 
-  defp from_row(row) do
+  defp from_rows(row, talks) do
+    IO.inspect(row)
+
     [
       event,
-      title,
       slug,
+      title,
       youtube,
       description,
       speaker_name,
       speaker_slug,
       speaker_company,
       speaker_bio,
-      speaker_twitter
+      speaker_twitter,
+      _speaker_interview
     ] = row
 
-    %Talk{
-      title: title,
-      slug: slug,
-      youtube: youtube,
-      description: description,
-      event: EventList.event(event),
-      speakers:
-        make_speakers(speaker_name, speaker_slug, speaker_company, speaker_bio, speaker_twitter)
-    }
-  end
+    last_talk =
+      case talks do
+        [last_talk | _] -> last_talk
+        [] -> %{slug: nil}
+      end
 
-  defp make_speakers(
-         name,
-         slug,
-         company,
-         bio,
-         twitter
-       ) do
-    name = parse_speaker_data(name)
-    company = parse_speaker_data(company)
-    slug = parse_speaker_data(slug)
-    bio = parse_speaker_data(bio)
-    twitter = parse_speaker_data(twitter)
-
-    [name, company, slug, bio, twitter]
-    |> Enum.zip()
-    |> Enum.map(fn {name, company, slug, bio, twitter} ->
+    speaker =
       Speaker.new(
-        name: name,
-        company: company,
-        slug: slug,
-        bio: bio,
-        twitter: twitter
+        name: speaker_name,
+        company: speaker_company,
+        slug: speaker_slug,
+        bio: speaker_bio,
+        twitter: speaker_twitter
       )
-    end)
-  end
 
-  defp parse_speaker_data(data) do
-    data
-    |> case do
-      "[\"" <> _ ->
-        {list, _} = Code.eval_string(data)
-        list
+    talk =
+      case last_talk.slug do
+        ^slug ->
+          # Concat to the end, so we don't have to reverse speakers later.
+          speakers = last_talk.speakers ++ [speaker]
+          struct!(last_talk, speakers: speakers)
 
-      _ ->
-        [data]
-    end
+        _ ->
+          %Talk{
+            title: title,
+            slug: slug,
+            youtube: youtube,
+            description: description,
+            event: EventList.event(event),
+            speakers: [speaker]
+          }
+      end
+
+    [talk | talks]
   end
 end

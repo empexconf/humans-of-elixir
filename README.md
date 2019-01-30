@@ -32,14 +32,10 @@ To create a new event page:
 
 To add new Talks and Speakers:
 
-Update the talks.csv to include the new talks and associated speaker data. In some places, new speaker data will overwrite older data for the same speaker.
+Update the Google Sheet (ask for the link) to include the new talks and associated speaker data. In some places, new speaker data will overwrite older data for the same speaker. 
 
-For talks that have multiple speakers, make all speaker fields an array, like so:
+For talks that have multiple speakers, add an extra row for every additional speaker. Make sure the `event` and `slug` are filled out for every speaker row.
 
-```csv
-"[""speaker 1 bio"", ""speaker 2 bio""]"
-```
+Then export as a CSV, replace `lib/site/talks/talks.csv` with the new CSV, and restart the server.
 
-It may be helpful to import the CSV into Google Spreadsheets or something to edit it.
-
-The talk will show up in `/talks/:slug`, `/talks`, `/speakers/:speaker_slug`, and `/speakers`
+The talks will show up in `/talks/:slug`, `/talks`, `/speakers/:speaker_slug`, and `/speakers`
